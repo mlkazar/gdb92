@@ -1,0 +1,10 @@
+after a git clone:
+
+find . -name '*.texi*' |xargs touch -d 1/1/18
+find . -name '*.y' | xargs touch -d 1/1/18
+find . -name '*.info' |xargs touch
+
+mkdir build
+cd build
+../configure
+make MAKEINFO=false
